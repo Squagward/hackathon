@@ -3,6 +3,9 @@
   "name": "I KNOW You're Not WEAK grr",
   "description": "Base Level Extension",
   "version": "1.0",
+  "permissions": [
+    "tabs"
+  ],
   
   "action": {
     "default_popup": "index.html",
