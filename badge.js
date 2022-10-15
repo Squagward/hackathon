@@ -1,1 +1,2 @@
-chrome.action.setBadgeText({text: "1"});
+let loopnum = "1";
+chrome.action.setBadgeText({text: loopnum});
