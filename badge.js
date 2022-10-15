@@ -1,2 +1,2 @@
-chrome.action.setBadgeText({text: "1"});
-chrome.action.setBadgeBackgroundColor({color: "green"});
+let loopnum = 1;
+chrome.action.setBadgeText({text: loopnum});
