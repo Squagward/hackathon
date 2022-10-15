@@ -1,12 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "I KNOW You're Not WEAK grr",
-  "description": "Base Level Extension",
+  "name": "PomoFriend",
+  "description": "A Pomodoro study timer and productivity tool!",
   "version": "1.0",
-  "permissions": [ "tabs", "storage"],
+  "permissions": [
+    "tabs"
+  ],
   
   "action": {
     "default_popup": "index.html",
-    "default_icon": "ext.png"
+    "default_icon": "ext2.png"
   }
 }
