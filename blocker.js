@@ -4,7 +4,7 @@
 //     alert("you are in youtube");
 // }
 const generateHTML = (pageName) => {
-    return `
+  return `
     <div id="clouds">
       <div class="cloud x1"></div>
       <div class="cloud x1_5"></div>
@@ -22,8 +22,8 @@ const generateHTML = (pageName) => {
     `;
 };
 
-const generateSTYLES = () =>{
-    return` <style>@import url(https://fonts.googleapis.com/css?family=opensans:500);
+const generateSTYLES = () => {
+  return ` <style>@import url(https://fonts.googleapis.com/css?family=opensans:500);
     body {
       background: #33cc99;
       color: #fff;
@@ -253,13 +253,13 @@ const generateSTYLES = () =>{
       }
     }
      </style>`;
-}
+};
 
 switch (window.location.hostname) {
-    case "www.facebook.com":
-        document.head.innerHTML = generateSTYLES();
-        document.body.innerHTML = generateHTML("FACEBOOK");
-        break;
+  case "www.facebook.com":
+    document.head.innerHTML = generateSTYLES();
+    document.body.innerHTML = generateHTML("FACEBOOK");
+    break;
 }
 // chrome.tabs.query.queryinfo.active((Boolean) => {
 //     if(tab.url){ // is a tab url
@@ -269,5 +269,5 @@ switch (window.location.hostname) {
 // boolean white or black
 // if white
 // any website which is not this is not openable
-// if black 
+// if black
 // these websites are not allowed
