@@ -1,8 +1,3 @@
-//managing the tabs
-//everytime they open a webpage this file is gonna have to run
-// if(window.location.hostname === "www.youtube.com"){
-//     alert("you are in youtube");
-// }
 const generateHTML = (pageName) => {
   return `
     <div id="clouds">
@@ -261,11 +256,6 @@ switch (window.location.hostname) {
     document.body.innerHTML = generateHTML("FACEBOOK");
     break;
 }
-// chrome.tabs.query.queryinfo.active((Boolean) => {
-//     if(tab.url){ // is a tab url
-
-//     }
-// })
 // boolean white or black
 // if white
 // any website which is not this is not openable
