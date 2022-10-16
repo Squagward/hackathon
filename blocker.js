@@ -250,6 +250,8 @@ const generateSTYLES = () => {
      </style>`;
 };
 
+//keep an ongoing list of blacklist or whitelist until user clears list
+
 function getInputValue() {
   // Selecting the input element and get its value
   var inputVal = document.getElementById("whitelist").value;
