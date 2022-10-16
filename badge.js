@@ -1,2 +1,5 @@
-let badgetext = "on";
-chrome.action.setBadgeText({ text: badgetext });
+const check = document.getElementById("check");
+
+check.addEventListener("click", () => {
+  chrome.action.setBadgeText({ text: check.checked ? "on" : "off" });
+});
