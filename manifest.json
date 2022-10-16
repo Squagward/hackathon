@@ -9,7 +9,7 @@
       "js": ["blocker.js"]
     }
   ],
-  "permissions": ["tabs", "storage"],
+  "permissions": ["tabs", "activeTab", "storage"],
 
   "action": {
     "default_popup": "index.html",

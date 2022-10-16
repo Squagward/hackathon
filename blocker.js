@@ -250,7 +250,56 @@ const generateSTYLES = () => {
      </style>`;
 };
 
-//keep an ongoing list of blacklist or whitelist until user clears list
+// //keep an ongoing list of blacklist or whitelist until user clears list
+// function getInputValue(){
+//   // Selecting the input element and get its value 
+//     var inputVal = document.getElementById("whitelist").value;
+//     let blacklist = inputVal.split("\n");
+//     return blacklist;
+// }
+
+// async function getCurrentTab() {
+//   let queryOptions = {active: true, currentWindow: true };
+//   // `tab` will either be a `tabs.Tab` instance or `undefined`.
+//   let tab = await chrome.tabs.query(queryOptions);
+//   return tab[0].url;
+// }
+
+// chrome.tabs.onUpdated.addListener(async function () {
+//   console.log("TAB UPDATED")
+//   let url = await getTab()
+//   console.log(url);
+// })
+
+// chrome.tabs.onUpdated.addListener(function () {
+//   console.log("TAB UPDATED")
+//   getTab().then(url => {
+//       console.log(url);
+//   })
+// })
+
+
+
+
+// chrome.tabs.onUpdated.addListener(function(){
+//   chrome.tabs.getSelected(null,function(tab) {//get current tab without any selectors
+//       alert(tab.url);  //get tab value 'url'
+//   });
+// });
+
+
+// document.getElementById("save").addEventListener("click", () => {
+//   getInputValue().forEach(site => {
+//     alert(site);
+//     alert(getCurrentTab());
+//     if(getCurrentTab() === site){
+//       alert("blocking");
+//       document.head.innerHTML = generateSTYLES();
+//       document.body.innerHTML = generateHTML("FACEBOOK");
+//     }
+//   });
+// })
+
 
 // switch (window.location.hostname) {
 //   case "www.facebook.com":
