@@ -1,9 +1,9 @@
 //keep an ongoing list of blacklist or whitelist until user clears list
-chrome.tabs.onUpdated.addListener(async function () {
-  console.log("TAB UPDATED");
-  let { url } = await getCurrentTab();
-  alert(url);
-});
+// chrome.tabs.onUpdated.addListener(async function () {
+//   console.log("TAB UPDATED");
+//   let { url } = await getCurrentTab();
+//   alert(url);
+// });
 
 function getInputValue() {
   // Selecting the input element and get its value
