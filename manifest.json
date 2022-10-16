@@ -10,7 +10,7 @@
     }
   ],
   "permissions": ["tabs", "storage"],
-  
+
   "action": {
     "default_popup": "index.html",
     "default_icon": "ext2.png",
