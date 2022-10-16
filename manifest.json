@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PomoFriend",
-  "description": "A Pomodoro study timer and productivity tool!",
+  "description": "A Pomodoro study timer and website blacklister!",
   "version": "1.0",
   "content_scripts": [
     {
