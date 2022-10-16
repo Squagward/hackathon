@@ -39,20 +39,18 @@ export const TaskList = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "row",
+        flexDirection: "column",
       }}
     >
-      <FormGroup
-        className="todo"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
+      <FormGroup className="todo">
         {todos.map((todo, i) => (
-          <>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "row",
+            }}
+          >
             <FormControlLabel
               control={
                 <Checkbox
@@ -76,7 +74,7 @@ export const TaskList = () => {
             >
               Delete
             </Button>
-          </>
+          </div>
         ))}
       </FormGroup>
       <div>
