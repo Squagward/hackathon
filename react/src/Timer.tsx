@@ -1,58 +1,56 @@
+import { Button, ButtonGroup } from "@mui/material";
 import { useEffect, useState } from "react";
 import "./Timer.css";
 import { formatTime, MS_IN_MINUTE } from "./utils";
-import { Button } from "@mui/material";
 
 export const Timer = () => {
   const initialStudyTime = 25 * MS_IN_MINUTE;
-  const initialRelaxTime = 5 * MS_IN_MINUTE;
+  const initialBreakTime = 5 * MS_IN_MINUTE;
 
-  const [studyTime, setStudyTime] = useState(initialStudyTime);
-  const [relaxTime, setRelaxTime] = useState(initialRelaxTime);
-
-  const [studyActive, setStudyActive] = useState(true);
+  const [timeLeft, setTimeLeft] = useState(initialStudyTime);
   const [paused, setPaused] = useState(true);
+  const [shouldStudy, setShouldStudy] = useState(true);
 
   useEffect(() => {
     if (paused) return;
 
     const interval = setInterval(() => {
-      if (studyActive) {
-        setStudyTime((prev) => Math.max(0, prev - 1000));
-      } else {
-        setRelaxTime((prev) => Math.max(0, prev - 1000));
+      setTimeLeft((prev) => Math.max(0, prev - 1000));
+      if (timeLeft <= 0) {
+        if (shouldStudy) {
+          setTimeLeft(initialBreakTime);
+        } else {
+          setTimeLeft(initialStudyTime);
+        }
+        setShouldStudy(!shouldStudy);
       }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [studyActive, paused]);
+  }, [timeLeft, paused]);
 
   return (
-    <div className="timer">
-      <h1>
-        {formatTime(studyTime)} / {formatTime(relaxTime)}
-      </h1>
-      <Button
-        variant="contained"
-        onClick={() => {
-          if (studyActive) {
-            setStudyTime(initialStudyTime);
-          } else {
-            setRelaxTime(initialRelaxTime);
-          }
-        }}
-      >
-        Reset Timer
-      </Button>
-      <Button
-        variant="contained"
-        onClick={() => setStudyActive((prev) => !prev)}
-      >
-        Switch the countdown
-      </Button>
-      <Button variant="contained" onClick={() => setPaused((prev) => !prev)}>
-        {paused ? "Play" : "Pause"}
-      </Button>
-    </div>
+    <>
+      <h1>{formatTime(timeLeft)}</h1>
+      <h2>{shouldStudy ? "STUDY" : "TAKE A BREAK :)"}</h2>
+      <div className="timer">
+        <ButtonGroup>
+          <Button
+            variant="contained"
+            onClick={() => {
+              setTimeLeft(initialStudyTime);
+            }}
+          >
+            Reset Timer
+          </Button>
+          <Button
+            variant="contained"
+            onClick={() => setPaused((prev) => !prev)}
+          >
+            {paused ? "Play" : "Pause"}
+          </Button>
+        </ButtonGroup>
+      </div>
+    </>
   );
 };
