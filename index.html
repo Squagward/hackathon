@@ -9,9 +9,36 @@
       <button id="colorChange"></button>
       <form>
         <a href="https://hackathon-three-lac.vercel.app/" target="_blank">
-          <input type="BUTTON" value="G" />
+          <input type="BUTTON" value="PomoFriend" />
         </a>
       </form>
+
+      <link href="styles.css" rel="stylesheet" />
+    <title data-i18n="__MSG_ext_extension_name__ - __MSG_html_options_title__">
+      PomoFriend - Settings
+    </title>
+  </head>
+  <div class="formRow autoSuspendOption">
+    <label
+      id="whitelistLbl"
+      for="whitelist"
+      data-i18n="__MSG_html_options_whitelist_title__&nbsp;&nbsp;"
+    >
+      Blacklist websites from the following URLs:
+      <!-- <input type="text" placeholder="Type something..." id="myInput" /> -->
+      <form>
+      <input type="submit" value = "Submit">
+    </form>
+      <button id="button">Save</button>
+    </label>
+
+    <textarea
+      id="whitelist"
+      placeholder="Type something..."
+      class="option"
+      rows="10"
+      cols="50"
+    ></textarea>
     </div>
   </body>
 </html>
