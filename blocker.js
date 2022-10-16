@@ -250,12 +250,38 @@ const generateSTYLES = () => {
      </style>`;
 };
 
-switch (window.location.hostname) {
-  case "www.facebook.com":
-    document.head.innerHTML = generateSTYLES();
-    document.body.innerHTML = generateHTML("FACEBOOK");
-    break;
+function getInputValue() {
+  // Selecting the input element and get its value
+  var inputVal = document.getElementById("whitelist").value;
+
+  // Displaying the value
+  let blacklist = inputVal.split("\n");
+  alert(blacklist);
+  return blacklist;
 }
+
+
+document.getElementById("button").addEventListener("click", () => {
+  alert("button was clicked!");
+  getInputValue().forEach(site => {
+    alert(site + " " + window.location.hostname);    
+    if(window.location.hostname === site){
+      document.head.innerHTML = generateSTYLES();
+      document.body.innerHTML = generateHTML("FACEBOOK");
+    }
+  });
+})
+
+debugger;
+
+
+
+// switch (window.location.hostname) {
+//   case "www.facebook.com":
+//     document.head.innerHTML = generateSTYLES();
+//     document.body.innerHTML = generateHTML("FACEBOOK");
+//     break;
+// }
 // boolean white or black
 // if white
 // any website which is not this is not openable

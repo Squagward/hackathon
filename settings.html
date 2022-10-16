@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script type="text/javascript" src="js/options.js"></script>
     <link href="styles.css" rel="stylesheet" />
     <title data-i18n="__MSG_ext_extension_name__ - __MSG_html_options_title__">
       PomoFriend - Settings
@@ -15,18 +14,7 @@
     >
       Blacklist websites from the following URLs:
       <!-- <input type="text" placeholder="Type something..." id="myInput" /> -->
-      <button type="button" onclick="getInputValue();">Save</button>
-
-      <script>
-        function getInputValue() {
-          // Selecting the input element and get its value
-          var inputVal = document.getElementById("whitelist").value;
-
-          // Displaying the value
-          let strangy = inputVal.split("\n");
-          alert(strangy);
-        }
-      </script>
+      <button id="button">Save</button>
     </label>
 
     <textarea
